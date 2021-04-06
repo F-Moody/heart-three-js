@@ -25,6 +25,10 @@ const url = '/models/heart_made_of_strings/scene.gltf';
 gltfLoader.load(url, (gltf) => {
     const root = gltf.scene
     scene.add(root)
+}, ( xhr ) => {
+
+    console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
 });
 
 
